@@ -1,0 +1,421 @@
+/* tablet */
+.green {
+    --white: #ffffff;
+    --body: #28BC66;
+    --light:#2ce871;
+    --dark:#28BC66;
+}
+.red {
+    --white: #ffffff;
+    --body: #FF3131;
+    --light:#6D5363;
+    --dark:#FF3131;
+}
+.yellow {
+    --white: #ffffff;
+    --body: #F4E135;
+    --light:#FFF48F;
+    --dark:#F4E135;
+    
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+        body {
+            font-family: 'Kumbh Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--body);
+        }
+
+
+        #logo {
+            font-family: 'Varela Round', sans-serif;
+            font-weight: bold;
+            bottom: 76%;
+            position: absolute;
+            height: 40%;
+            width: 30%;
+        }
+
+        #clock {
+            font-size: 150%;
+            color: rgb(0, 0, 0);
+            font-family: 'Varela Round', sans-serif;
+            font-weight: bold;
+            top: 5%;
+            right: 5%;
+            position: absolute;
+        }
+
+        .box {
+            width: 80%;
+            height: 80%;
+            background-color: #EFEFEF;
+            border-radius: 1%;
+            padding: 1%;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #textbox {
+            font-size: 250%;
+            position: absolute;
+            top: 35%;
+            font-family: Kanit;
+            left: 3%;
+        }
+
+        #circle {
+            position: relative;
+            width: 20%;
+            padding-top: 20%;
+            border-radius: 50%;
+            background: linear-gradient(90deg, var(--dark) 20%, var(--light) 100%);
+            overflow: hidden;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #circleint {
+            font-size: 250%;
+            font-weight: bold;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Kanit;
+        }
+
+        #SYS {
+            font-size: 200%;
+            position: absolute;
+            top: 48%;
+            font-weight: bold;
+            left: 5%;
+        }
+
+        #DIA {
+            font-size: 200%;
+            position: absolute;
+            top: 57%;
+            font-weight: bold;
+            left: 5%;
+        }
+
+        #PUL {
+            font-size: 200%;
+            position: absolute;
+            top: 66%;
+            font-weight: bold;
+            left: 5%;
+        }
+
+        .result {
+            font-family: Kanit;
+            margin-bottom: 10px;
+            /* Adjust the margin as needed */
+        }
+
+        .resultint {
+            font-family: Kanit;
+
+        }
+
+        #SYSint {
+            font-size: 200%;
+            position: absolute;
+            top: 48%;
+            font-weight: bold;
+            left: 56%;
+        }
+        #mmhg1{
+            font-size: 200%;
+            position: absolute;
+            top: 49%;
+            font-weight: bold;
+            left: 65%;
+        }
+
+        #DIAint {
+            font-size: 200%;
+            position: absolute;
+            top: 57%;
+            font-weight: bold;
+            left: 56%;
+
+        }
+        #mmhg2{
+            font-size: 200%;
+            position: absolute;
+            top: 58%;
+            font-weight: bold;
+            left: 65%;
+        }
+
+        #PULint {
+            font-size: 200%;
+            position: absolute;
+            top: 66%;
+            font-weight: bold;
+            left: 56%;
+
+        }
+        #min{
+            font-size: 200%;
+            position: absolute;
+            top: 67%;
+            font-weight: bold;
+            left: 65%;
+        }
+
+        #statusnow {
+            font-size: 250%;
+            color: #00FF40;
+            top: 2.8%;
+            left: 20%;
+            position: absolute;
+            font-family: 'Varela Round', sans-serif;
+            font-weight: bold;
+        }
+
+        #advice {
+            font-size: 200%;
+            position: absolute;
+            top: 75%;
+            font-weight: bold;
+            left: 3%;
+            font-family: Kanit;
+        }
+
+        #advicestr {
+            font-size: 250%;
+            position: absolute;
+            top: 75%;
+
+            left: 17%;
+            font-family: Kanit;
+        }
+
+        a {
+            color: black;
+            border-radius: 2px;
+            border: 1px solid black;
+            /* Add a 1px solid black border */
+            padding: 10px 20px;
+            /* Optional: Add padding for better appearance */
+            text-decoration: none;
+            /* Optional: Remove default underline */
+            position: absolute;
+            top: 90%;
+            left: 46%;
+        }
+        #back{
+            left: 38%;
+        }
+        #data{
+            left: 50%;
+        }
+    }
+
+    /* Vertically */
+    @media only screen and (min-width: 767px) and (max-width: 1024px) {
+        body {
+            font-family: 'Kumbh Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--body);
+        }
+
+        #logo {
+            font-family: 'Varela Round', sans-serif;
+            font-weight: bold;
+            bottom: 80%;
+            position: fixed;
+            height: 30%;
+            width: 45%;
+        }
+
+        #clock {
+            font-size: 150%;
+            color: rgb(0, 0, 0);
+            font-family: 'Varela Round', sans-serif;
+            font-weight: bold;
+            top: 5%;
+            right: 5%;
+            position: absolute;
+        }
+
+        .box {
+            width: 80%;
+            height: 80%;
+            background-color: #EFEFEF;
+            border-radius: 1%;
+            padding: 1%;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #textbox {
+            font-size: 250%;
+            position: absolute;
+            top: 35%;
+            font-family: Kanit;
+            left: 3%;
+        }
+
+        #circle {
+            position: relative;
+            width: 25%;
+            padding-top: 25%;
+            border-radius: 50%;
+            background: linear-gradient(90deg, var(--dark) 20%, var(--light) 100%);
+            overflow: hidden;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #circleint {
+            font-size: 250%;
+            font-weight: bold;
+            position: absolute;
+            top: 24%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Kanit;
+        }
+
+        #SYS {
+            font-size: 180%;
+            position: absolute;
+            top: 48%;
+            font-weight: bold;
+            left: 5%;
+        }
+
+        #DIA {
+            font-size: 180%;
+            position: absolute;
+            top: 57%;
+            font-weight: bold;
+            left: 5%;
+        }
+
+        #PUL {
+            font-size: 180%;
+            position: absolute;
+            top: 66%;
+            font-weight: bold;
+            left: 5%;
+        }
+
+        .result {
+            font-family: Kanit;
+            margin-bottom: 10px;
+            /* Adjust the margin as needed */
+        }
+
+        .resultint {
+            font-family: Kanit;
+
+        }
+
+        #SYSint {
+            font-size: 180%;
+            position: absolute;
+            top: 48%;
+            font-weight: bold;
+            left: 65%;
+
+        }
+        #mmhg1{
+            font-size: 180%;
+            position: absolute;
+            top: 49%;
+            font-weight: bold;
+            left: 75%;
+        }
+
+        #DIAint {
+            font-size: 180%;
+            position: absolute;
+            top: 57%;
+            font-weight: bold;
+            left: 65%;
+
+        }
+        #mmhg2{
+            font-size: 180%;
+            position: absolute;
+            top: 58%;
+            font-weight: bold;
+            left: 75%;
+        }
+        #PULint {
+            font-size: 180%;
+            position: absolute;
+            top: 66%;
+            font-weight: bold;
+            left: 65%;
+
+        }
+        #min{
+            font-size: 180%;
+            position: absolute;
+            top: 67%;
+            font-weight: bold;
+            left: 75%;
+        }
+        #statusnow {
+            font-size: 250%;
+            color: #00FF40;
+            top: 2.8%;
+            left: 20%;
+            position: absolute;
+            font-family: 'Varela Round', sans-serif;
+            font-weight: bold;
+        }
+
+        #advice {
+            font-size: 200%;
+            position: absolute;
+            top: 75%;
+            font-weight: bold;
+            left: 3%;
+            font-family: Kanit;
+        }
+
+        #advicestr {
+            font-size: 250%;
+            position: absolute;
+            top: 75%;
+
+            left: 17%;
+            font-family: Kanit;
+        }
+
+        a {
+            color: black;
+            border-radius: 2px;
+            border: 1px solid black;
+            /* Add a 1px solid black border */
+            padding: 10px 20px;
+            /* Optional: Add padding for better appearance */
+            text-decoration: none;
+            /* Optional: Remove default underline */
+            position: absolute;
+            top: 90%;
+            left: 46%;
+        }
+        #data{
+            left: 55%;
+        }
+        #back{
+            left: 30%;
+        }
+    }

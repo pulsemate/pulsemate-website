@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aboutus.css">
+
+    <meta charset="UTF-8" />
+    <title>About us</title>
+    <!-- Display current user information -->
+</head>
+
+<body>
+    <div id="user-info-container">
+        <p id="user-info"></p>
+        <!-- Add Logout button -->
+        <button id="logout-btn" onclick="logout()">ออกจากระบบ</button>
+    </div>
+    <div id="container">
+        <img id="logo" src="../Pic/UI_website__1_-removebg-preview.png">
+        <p id="aboutus">About us</p>
+        <div id="box">สวัสดีครับ พวกเรานักศึกษาคณะวิศวกรรมศาสตร์
+            สาขาระบบไอโอทีและสารสนเทศ
+            สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ชั้นปีที่ 1
+            ในปัจจุบัน มีผู้สูงอายุที่มีโรคประจำตัวเพิ่มมากขึ้น และ
+            การวัดความดันโลหิตเป็นหนึ่งในขั้นตอนสำคัญในการวินิจฉัยโรคเหล่านี้
+            แต่ปัญหาที่อาจเกิดขึ้นคือการหลงลืมในการบันทึกข้อมูลค่าความดัน
+            ด้วยเหตุนี้ PulseMate
+            จึงทำหน้าที่ในการบันทึกและส่งข้อมูลค่าความดันอีกทั้งยังช่วยลดปัญหาการลืมและช่วยให้ผู้ดูแลสามารถตรวจสอบข้อมูลความดันของผู้สูงอายุได้อย่างสะดวกสบาย
+            ทำให้การวินิจฉัยโรคมีประสิทธิภาพและแม่นยำมากยิ่งขึ้นอีกด้วย
+        </div>
+        <div class="profile-container1">
+            <img src="../Pic/inon.jpg" alt="Profile Picture" class="pfp" id="non">
+            <p class="name">66010523 <br>พรเกียรติ รอบคอบ</p>
+        </div>
+        <div class="profile-container2">
+            <img src="../Pic/ipai.jpg" alt="Profile Picture" class="pfp" id="pai">
+            <p class="name">66010810 <br>ศิลปชัย หอมหวล</p>
+        </div>
+        <div class="profile-container3">
+            <img src="../Pic/iong.jpg" alt="Profile Picture" class="pfp" id="ong">
+            <p class="name">66010781 <br>วีระภัทร แสงอรุณ</p>
+        </div>
+        <div class="profile-container4">
+            <img src="../Pic/ikane.jpg" alt="Profile Picture" class="pfp" id="kane">
+            <p class="name">66011340 <br>ชินวัตร ศิลาธนสาร</p>
+        </div>
+        <div class="profile-container5">
+            <img src="../Pic/ibuddy.jpg" alt="Profile Picture" class="pfp" id="bud">
+            <p class="name">66010449 <br>ปณวัฒน์ นามสง่า</p>
+        </div>
+
+
+
+    </div>
+
+    <!-- ... (other dashboard content) ... -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <!-- Your Firebase Configuration -->
+    <script>
+
+        var firebaseConfig = {
+            apiKey: "AIzaSyBGGdqJxgpT5PZQnigaVFS-OfMD-jJxjGQ",
+            authDomain: "authentication-app-2043f.firebaseapp.com",
+            databaseURL: "https://authentication-app-2043f-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "authentication-app-2043f",
+            storageBucket: "authentication-app-2043f.appspot.com",
+            messagingSenderId: "1083690050567",
+            appId: "1:1083690050567:web:6c79d9fcd23a626b56f6a2",
+            measurementId: "G-FTR73XSRW6"
+        };
+        firebase.initializeApp(firebaseConfig);
+        function displayUserInfo(user) {
+            // Assuming you have an element with id "user-info" to display user information
+            var userInfoElement = document.getElementById('user-info');
+
+            // Check if the user is signed in
+            if (user) {
+                // Retrieve the user's name and surname from the Realtime Database
+                var userId = user.uid;
+                var userRef = firebase.database().ref('users/' + userId);
+
+                userRef.once('value').then(function (snapshot) {
+                    var userData = snapshot.val();
+                    if (userData) {
+                        var userName = userData.name;
+                        var userSurname = userData.surname;
+                        userInfoElement.innerHTML = 'Welcome user: ' + userName + ' ' + userSurname;
+                    } else {
+                        console.error('User data is null.');
+                    }
+                }).catch(function (error) {
+                    console.error('Error getting user data from Realtime Database:', error);
+                });
+            } else {
+                userInfoElement.innerHTML = 'User is not signed in.';
+            }
+        }
+    </script>
+
+    <!-- Your signin.js script -->
+    <script src="index.js"></script>
+
+    <script>
+        // Additional error logging for debugging
+        console.log("Firebase initialized on dashboard.html");
+
+        // Listen for changes in the user's sign-in state
+        firebase.auth().onAuthStateChanged(function (user) {
+            // Call the function to display user information
+            displayUserInfo(user);
+        });
+    </script>
+
+    <script>
+        // Function to handle logout
+        function logout() {
+            firebase.auth().signOut().then(function () {
+                // Sign-out successful.
+                alert('ออกจากระบบสำเร็จ');
+                // Redirect to signin.html after successful logout
+                window.location.href = '../index.html';
+            }).catch(function (error) {
+                // An error happened.
+                console.error('Logout failed:', error);
+                alert('Logout failed: ' + error.message);
+            });
+        }
+    </script>
+</body>
+
+</html>

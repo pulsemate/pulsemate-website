@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="green">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboardphone.css">
+    <link rel="stylesheet" href="dashboardlaptop.css">
+    <link rel="stylesheet" href="dashboardipad.css">
+    <link rel="stylesheet" href="dashboardpc.css">
+    <link rel="icon" href="../Pic/favicon2.ico" type="image/x-icon">
+</head>
+<body>
+    <img id="logo" src="../Pic/UI_website__1_-removebg-preview.png">
+    <div id="clock"></div>
+    <script src="dashboard.js" defer></script>
+    <div class="box">
+        <p id="textbox">ผลการวัดความดันได้ดังนี้</p>
+        <div id="circle">
+        </div>
+        <p class='result' id="SYS">ค่าความดันขณะหัวใจบีบตัว:</p>
+        <p class='result' id="DIA">ค่าความดันขณะหัวใจคลายตัว:</p>
+        <p class='result' id="PUL">อัตราการเตันของหัวใจ:</p>
+        <p class='resultint' id="SYSint">123</p>
+        <p class='resultint' id="DIAint">123</p>
+        <p class='resultint' id="PULint">123</p>
+        <p id="advice">คำแนะนำ:</p>
+        <p id="advicestr"></p>
+        <p class="unit" id="mmhg1">mmHg</p>
+        <p class="unit" id="mmhg2">mmHg</p>
+        <p class="unit" id="min">/Min</p>
+    </div>
+    <p id="circleint">ปกติ</p>
+    <a id="back" href="../main/main.html">ย้อนกลับ</a>
+    <a href="https://docs.google.com/spreadsheets/d/1_kBuaN78tLVgqU_tSrB6dO4Kq37MLrghEaE3kUYSU98/edit?usp=sharing" id="data">ข้อมูลย้อนหลัง</a>
+</body>
+</html>

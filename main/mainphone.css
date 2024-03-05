@@ -1,0 +1,502 @@
+/* phone */
+@media only screen and (min-width:350px) and (max-width: 428px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-family: Kanit;
+        overflow: hidden;
+        text-align: center;
+    }
+
+
+    #user-info-container {
+        margin-top: 20px;
+        font-family: Kanit;
+        text-align: center;
+    }
+
+    #user-info {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        padding: 10px;
+        font-family: Kanit;
+        border-radius: 5px;
+        top: 10px; /* Adjust top value as needed */
+        left: 8px; /* Adjust left value as needed */
+        position: fixed;
+    }
+
+    #logout-btn {
+        margin-top: 10px;
+        background-color: #dc3545;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-family: Kanit;
+        border-radius: 5px;
+        position: fixed;
+        top: 8%;
+        /* Adjusted position */
+        left: 2%;
+        z-index: 2;
+    }
+
+    #logo {
+        position: absolute;
+        width: 90%;
+        height: auto;
+        top: 2%; /* Adjusted top value */
+        left: 10%;
+        transform: translateY(0); /* Adjusted transform value */
+        margin-bottom: 15px;
+    }
+
+    #info {
+        font-family: Kanit;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 22%;
+        /* Adjusted position */
+        margin-top: 25px;
+        font-size: 80%;
+        width: 120%;
+        left: 50%;
+    }
+
+    .box {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 10%;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin: 0.1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+        font-family: Kanit;
+    }
+
+    #box2 {
+        margin-top: 22%;
+        /* Adjusted position */
+    }
+
+    #measure {
+        position: relative;
+        height: 30%;
+        width: 40%;
+        top: 30%;
+        /* Adjusted position */
+        left: -5%;
+        transform: translateY(-50%);
+    }
+
+    #info2 {
+        transform: translateX(10%);
+        position: relative;
+        font-family: Kanit;
+        font-size: 60%;
+        transform: translateY(90%);
+        text-align: left;
+        z-index: 1;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        padding: 5px 10px;
+        margin: auto;
+        text-decoration: none;
+        color: #fff;
+        background-color: #3498db;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        top: 70%;
+        /* Adjusted position */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Kanit;
+        font-size: 80%;
+    }
+
+    a:hover {
+        background-color: #2980b9;
+    }
+
+    #data {
+        left: 20%;
+        top: 90%;
+
+    }
+
+    #aboutus {
+        left: 80%;
+        top: 90%;
+        width: 20%;
+    }
+
+    #pulse {
+        width: 22%;
+        left: 51.5%;
+        top: 90%;
+    }
+}
+
+/* ipad */
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+    body {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 100vh;
+        background: -webkit-linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-family: Kanit;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+
+
+    #user-info-container {
+        margin-top: 20px;
+        font-family: Kanit;
+        text-align: center;
+    }
+
+    #user-info {
+        font-size: 25px;
+        font-weight: bold;
+        color: #000000;
+        padding: 10px;
+        font-family: Kanit;
+        border-radius: 5px;
+        top: 10px; /* Adjust top value as needed */
+        left: 8px; /* Adjust left value as needed */
+        position: absolute;
+    }
+
+    #logout-btn {
+        font-size: 100%;
+        margin-top: 5px;
+        background-color: #dc3545;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-family: Kanit;
+        border-radius: 5px;
+        position: absolute;
+        top: 8%;
+        /* Adjusted position */
+        left: 2%;
+        z-index: 2;
+    }
+
+    #logo {
+        position: absolute;
+        width: 90%;
+        height: auto;
+        top: -12%; /* Adjusted top value */
+        left: 10%;
+        transform: translateY(0); /* Adjusted transform value */
+    }
+
+    #info {
+        font-family: Kanit;
+        position: absolute;
+        top: 22%;
+
+        /* Adjusted position */
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 200%;
+        width: 120%;
+        left: -10%;
+    }
+
+    .box {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 13%;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin: 0.1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 130%;
+        font-family: Kanit;
+    }
+
+    #box2 {
+        margin-top: 17%;
+        /* Adjusted position */
+    }
+
+    #measure {
+        position: relative;
+        height: 30%;
+        width: 40%;
+        top: 32%;
+        /* Adjusted position */
+        left: 3%;
+        transform: translateY(-50%);
+    }
+
+    #info2 {
+        left: 0;
+        position: relative;
+        font-family: Kanit;
+        font-size: 90%;
+        transform: translateY(96%);
+        text-align: left;
+        z-index: 1;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        padding: 10px 20px;
+        margin: auto;
+        text-decoration: none;
+        color: #fff;
+        background-color: #3498db;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        top: 70%;
+        /* Adjusted position */
+        left: 40%;
+        transform: translate(-50%, -50%);
+        font-family: Kanit;
+        font-size: 150%;
+        z-index: 2;
+    }
+
+    a:hover {
+        background-color: #2980b9;
+    }
+
+    #data {
+        left: 20%;
+        top: 90%;
+
+    }
+
+    #aboutus {
+        left: 80%;
+        top: 90%;
+        width: 20%;
+    }
+
+    #pulse {
+        width: 20%;
+        left: 50%;
+        top: 90%;
+    }
+}
+/* ipad horizontal */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-family: Kanit;
+        overflow: hidden;
+        text-align: center;
+        
+    }
+
+
+    #user-info-container {
+        margin-top: 20px;
+        font-family: Kanit;
+        text-align: center;
+    }
+
+    #user-info {
+        font-size: 22px;
+        font-weight: bold;
+        color: #000000;
+        padding: 10px;
+        font-family: Kanit;
+        border-radius: 5px;
+        top: 2px; /* Adjust top value as needed */
+        left: 8px; /* Adjust left value as needed */
+        position: absolute;
+    }
+
+    #logout-btn {
+        font-size: 95%;
+        margin-top: 20px;
+        background-color: #dc3545;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-family: Kanit;
+        border-radius: 5px;
+        position: absolute;
+        top: 8%;
+        /* Adjusted position */
+        left: 2%;
+        z-index: 2;
+    }
+
+    #logo {
+        position: absolute;
+        /* Updated position */
+        width: 48%;
+        height: auto;
+        /* Allow the height to adjust based on the width */
+        transform: translateY(-65%);
+        left:28%;
+    }
+
+    #info {
+        font-family: Kanit;
+        position: absolute;
+        top: 25%;
+        /* Adjusted position */
+        margin-top: 10px;
+        font-size: 190%;
+        width: 120%;
+        left: -10%;
+    }
+
+    .box {
+        position: absolute;
+        top: 35%;
+        left: 32%;
+        transform: translateX(-50%);
+        width: 33%;
+        height: 18%;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin: 0.1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 95%;
+        font-family: Kanit;
+    }
+    
+    #box2 {
+        position: absolute;
+        top: 35%;
+        left: 68%;
+        transform: translateX(-50%);
+        width: 33%; /* Adjusted width to match #box1 */
+        height: 18%;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 100%;
+        font-family: Kanit;
+    }
+
+    #measure {
+        position: relative;
+        height: 35%;
+        width: 25%;
+        top: 33%;
+        /* Adjusted position */
+        left: 3%;
+        transform: translateY(-50%);
+    }
+
+    #info2 {
+        left: 2%;
+        position: relative;
+        font-family: Kanit;
+        font-size: 75%;
+        transform: translateY(70%);
+        text-align: left;
+        z-index: 1;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        padding: 10px 20px;
+        margin: auto;
+        text-decoration: none;
+        color: #fff;
+        background-color: #3498db;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        top: 70%;
+        /* Adjusted position */
+        left: 40%;
+        transform: translate(-50%, -50%);
+        font-family: Kanit;
+        font-size: 150%;
+    }
+
+    a:hover {
+        background-color: #2980b9;
+    }
+
+    #data {
+        left: 20%;
+        top: 90%;
+
+    }
+
+    #aboutus {
+        left: 80%;
+        top: 90%;
+
+    }
+
+    #pulse {
+        width: 15%;
+        left: 50%;
+        top: 90%;
+    }
+} 

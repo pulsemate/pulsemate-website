@@ -1,0 +1,411 @@
+/*Laptop*/
+.green {
+    --white: #ffffff;
+    --body: #28BC66;
+    --light: #2ce871;
+    --dark: #28BC66;
+}
+
+.red {
+    --white: #ffffff;
+    --body: #FF3131;
+    --light: #6D5363;
+    --dark: #FF3131;
+}
+
+.yellow {
+    --white: #ffffff;
+    --body: #F4E135;
+    --light: #FFF48F;
+    --dark: #F4E135;
+
+}
+
+@media only screen and (min-width: 1536px) and (max-width:1550px) {
+    body {
+        font-family: 'Kumbh Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--body);
+        height: 100%;
+    }
+
+    #logo {
+        font-family: 'Varela Round', sans-serif;
+        font-weight: bold;
+        bottom: 76%;
+        position: absolute;
+        height: 40%;
+        width: 30%;
+    }
+
+    #clock {
+        font-size: 150%;
+        color: rgb(0, 0, 0);
+        font-family: 'Varela Round', sans-serif;
+        font-weight: bold;
+        top: 5%;
+        right: 10%;
+        position: absolute;
+    }
+
+    .box {
+        width: 80%;
+        height: 80%;
+        background-color: #EFEFEF;
+        border-radius: 1%;
+        padding: 1%;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #textbox {
+        font-size: 250%;
+        position: absolute;
+        top: 38%;
+        font-family: Kanit;
+        left: 3%;
+    }
+
+    #circle {
+        position: relative;
+        width: 15%;
+        padding-top: 15%;
+        /* 1:1 aspect ratio for a perfect circle */
+        border-radius: 50%;
+        /* Ensures a circular shape */
+        background: linear-gradient(90deg, var(--dark)20%, var(--light) 100%);
+        overflow: hidden;
+        /* Hide overflowing content */
+        top: 5%;
+        /* Move the circle 20 pixels down from its normal position */
+        left: 41.5%;
+    }
+
+    #circleint {
+        font-size: 250%;
+        font-weight: bold;
+        position: absolute;
+        top: 22%;
+        left: 46.5%;
+        font-family: Kanit;
+    }
+
+    #SYS {
+        font-size: 30px;
+        position: absolute;
+        top: 53%;
+        font-weight: bold;
+        left: 5%;
+    }
+
+    #DIA {
+        font-size: 30px;
+        position: absolute;
+        top: 60%;
+        font-weight: bold;
+        left: 5%;
+    }
+
+    #PUL {
+        font-size: 30px;
+        position: absolute;
+        top: 67%;
+        font-weight: bold;
+        left: 5%;
+    }
+
+    .result {
+        font-family: Kanit;
+    }
+
+    .resultint {
+        font-family: Kanit;
+    }
+
+    #SYSint {
+        font-size: 190%;
+        position: absolute;
+        top: 53%;
+        font-weight: bold;
+        left: 40%;
+
+    }
+
+    #mmhg1 {
+        font-size: 190%;
+        position: absolute;
+        top: 53%;
+        font-weight: bold;
+        left: 50%;
+    }
+
+
+
+    #DIAint {
+        font-size: 190%;
+        position: absolute;
+        top: 60%;
+        font-weight: bold;
+        left: 40%;
+
+    }
+
+    #mmhg2 {
+        font-size: 190%;
+        position: absolute;
+        top: 60%;
+        font-weight: bold;
+        left: 50%;
+    }
+
+    #PULint {
+        font-size: 190%;
+        position: absolute;
+        top: 67%;
+        font-weight: bold;
+        left: 40%;
+
+    }
+
+    #min {
+        font-size: 190%;
+        position: absolute;
+        top: 67%;
+        font-weight: bold;
+        left: 50%;
+    }
+
+    #statusnow {
+        font-size: 150%;
+        color: #00FF40;
+        top: 2.8%;
+        left: 12%;
+        position: absolute;
+        font-family: 'Varela Round', sans-serif;
+        font-weight: bold;
+    }
+
+    #advice {
+        font-size: 200%;
+        position: absolute;
+        top: 75%;
+        font-weight: bold;
+        left: 3%;
+        font-family: Kanit;
+    }
+
+    #advicestr {
+        font-size: 250%;
+        position: absolute;
+        top: 75%;
+
+        left: 17%;
+        font-family: Kanit;
+    }
+
+    a {
+        color: black;
+        border-radius: 2px;
+        border: 1px solid black;
+        /* Add a 1px solid black border */
+        padding: 10px 20px;
+        /* Optional: Add padding for better appearance */
+        text-decoration: none;
+        /* Optional: Remove default underline */
+        position: absolute;
+        top: 90%;
+        left: 55%;
+       
+        transition: background-color 0.5s ease;
+        font-family: Kanit;
+    }
+
+    a:hover {
+        background-color: #17e5402d;
+        /* Change background color on hover */
+    }
+
+    #data {
+        left: 35%;
+    }
+
+}
+
+/* Minimized */
+@media only screen and (min-width: 900px) and (max-width:1100px) {
+    body {
+        font-family: 'Kumbh Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background: linear-gradient(180deg, rgb(40, 188, 102)20%,#2ce871 100%)no-repeat; */
+        background-color: var(--body);
+        height: 100%;
+    }
+
+    #logo {
+        font-family: 'Varela Round', sans-serif;
+        font-weight: bold;
+        bottom: 76%;
+        position: absolute;
+        height: 40%;
+        width: 30%;
+    }
+
+    #clock {
+        font-size: 150%;
+        color: rgb(0, 0, 0);
+        font-family: 'Varela Round', sans-serif;
+        font-weight: bold;
+        top: 5%;
+        right: 10%;
+        position: absolute;
+    }
+
+    .box {
+        width: 80%;
+        height: 80%;
+        background-color: #EFEFEF;
+        border-radius: 1%;
+        padding: 1%;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #textbox {
+        font-size: 250%;
+        position: absolute;
+        top: 38%;
+        font-family: Kanit;
+        left: 3%;
+    }
+
+    #circle {
+        position: relative;
+        width: 15%;
+        padding-top: 15%;
+        /* 1:1 aspect ratio for a perfect circle */
+        border-radius: 50%;
+        /* Ensures a circular shape */
+        background: linear-gradient(90deg, var(--dark)20%, var(--light) 100%);
+        overflow: hidden;
+        /* Hide overflowing content */
+        top: 5%;
+        /* Move the circle 20 pixels down from its normal position */
+        left: 41.5%;
+    }
+
+    #circleint {
+        font-size: 250%;
+        font-weight: bold;
+        position: absolute;
+        top: 22%;
+        left: 46.5%;
+        font-family: Kanit;
+    }
+
+    #SYS {
+        font-size: 30px;
+        position: absolute;
+        top: 53%;
+        font-weight: bold;
+        left: 5%;
+    }
+
+    #DIA {
+        font-size: 30px;
+        position: absolute;
+        top: 60%;
+        font-weight: bold;
+        left: 5%;
+    }
+
+    #PUL {
+        font-size: 30px;
+        position: absolute;
+        top: 67%;
+        font-weight: bold;
+        left: 5%;
+    }
+
+    .result {
+        font-family: Kanit;
+    }
+
+    .resultint {
+        font-family: Kanit;
+    }
+
+    #SYSint {
+        font-size: 190%;
+        position: absolute;
+        top: 53%;
+        font-weight: bold;
+        left: 40%;
+
+    }
+
+    #DIAint {
+        font-size: 190%;
+        position: absolute;
+        top: 60%;
+        font-weight: bold;
+        left: 40%;
+
+    }
+
+    #PULint {
+        font-size: 190%;
+        position: absolute;
+        top: 67%;
+        font-weight: bold;
+        left: 40%;
+
+    }
+
+    #statusnow {
+        font-size: 150%;
+        color: #00FF40;
+        top: 2.8%;
+        left: 12%;
+        position: absolute;
+        font-family: 'Varela Round', sans-serif;
+        font-weight: bold;
+    }
+
+    #advice {
+        font-size: 200%;
+        position: absolute;
+        top: 75%;
+        font-weight: bold;
+        left: 3%;
+        font-family: Kanit;
+    }
+
+    #advicestr {
+        font-size: 250%;
+        position: absolute;
+        top: 75%;
+
+        left: 17%;
+        font-family: Kanit;
+    }
+
+    a {
+        color: black;
+        border-radius: 2px;
+        border: 1px solid black;
+        /* Add a 1px solid black border */
+        padding: 10px 20px;
+        /* Optional: Add padding for better appearance */
+        text-decoration: none;
+        /* Optional: Remove default underline */
+        position: absolute;
+        top: 90%;
+        left: 47%;
+    }
+}
