@@ -134,7 +134,7 @@ const getData = () => {
   };
 }
 
-const socket = new WebSocket("ws://3.1.206.42:1880/dataUpdate");
+const socket = new WebSocket("wss://3.1.206.42:1880/dataUpdate");
 
 
 // Connection opened
