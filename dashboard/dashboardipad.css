@@ -16,11 +16,237 @@
     --body: #F4E135;
     --light:#FFF48F;
     --dark:#F4E135;
-    
+}.green #welcome{
+    display: none;
+}.red #welcome{
+    display: none;
+}
+.yellow #welcome{
+    display: none;
+}
+.idle{
+    --body:rgb(201, 255, 255);
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+.idle #circle {
+    border: 2px solid #000;
+    border-radius: 50%;
+    height: 1%; /* Decrease the height to make the circle smaller */
+    background-image: url(../Pic/UI_website-removebg-preview.png);
+    background-size: contain; /* Ensure the background image fits within the circle */
+    background-position: center;
+    position: relative;
+    width: 25%; /* Decrease the width to make the circle smaller */
+    overflow: hidden;
+    top: 5%; /* Adjust the top positioning */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.idle p{
+    display: none;
+}
+.idle #welcome {
+    width: 40%;
+    font-size: 250%;
+    font-family: Kanit;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.idle body {
+    font-family: Kanit;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body);
+}
+
+
+.idle #logo {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    bottom: 76%;
+    position: absolute;
+    height: 40%;
+    width: 30%;
+}
+
+.idle #clock {
+    font-size: 150%;
+    color: rgb(0, 0, 0);
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    top: 5%;
+    right: 5%;
+    position: absolute;
+}
+
+.idle .box {
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 1%;
+    padding: 1%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.idle #textbox {
+    font-size: 250%;
+    position: absolute;
+    top: 35%;
+    font-family: Kanit;
+    left: 3%;
+}
+.idle #circleint {
+    font-size: 250%;
+    font-weight: bold;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Kanit;
+}
+
+.idle #SYS {
+    font-size: 200%;
+    position: absolute;
+    top: 48%;
+    font-weight: bold;
+    left: 5%;
+}
+
+.idle #DIA {
+    font-size: 200%;
+    position: absolute;
+    top: 57%;
+    font-weight: bold;
+    left: 5%;
+}
+
+.idle #PUL {
+    font-size: 200%;
+    position: absolute;
+    top: 66%;
+    font-weight: bold;
+    left: 5%;
+}
+
+.idle .result {
+    font-family: Kanit;
+    margin-bottom: 10px;
+    /* Adjust the margin as needed */
+}
+
+.idle .resultint {
+    font-family: Kanit;
+
+}
+
+.idle #SYSint {
+    font-size: 200%;
+    position: absolute;
+    top: 48%;
+    font-weight: bold;
+    left: 56%;
+}
+.idle #mmhg1{
+    font-size: 200%;
+    position: absolute;
+    top: 49%;
+    font-weight: bold;
+    left: 65%;
+}
+
+.idle #DIAint {
+    font-size: 200%;
+    position: absolute;
+    top: 57%;
+    font-weight: bold;
+    left: 56%;
+
+}
+.idle #mmhg2{
+    font-size: 200%;
+    position: absolute;
+    top: 58%;
+    font-weight: bold;
+    left: 65%;
+}
+
+.idle #PULint {
+    font-size: 200%;
+    position: absolute;
+    top: 66%;
+    font-weight: bold;
+    left: 56%;
+
+}
+.idle #min{
+    font-size: 200%;
+    position: absolute;
+    top: 67%;
+    font-weight: bold;
+    left: 65%;
+}
+
+.idle #statusnow {
+    font-size: 250%;
+    color: #00FF40;
+    top: 2.8%;
+    left: 20%;
+    position: absolute;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+}
+
+.idle #advice {
+    font-size: 200%;
+    position: absolute;
+    top: 75%;
+    font-weight: bold;
+    left: 3%;
+    font-family: Kanit;
+}
+
+.idle #advicestr {
+    font-size: 250%;
+    position: absolute;
+    top: 75%;
+
+    left: 17%;
+    font-family: Kanit;
+}
+
+.idle a {
+    color: black;
+    border-radius: 2px;
+    border: 1px solid black;
+    /* Add a 1px solid black border */
+    padding: 10px 20px;
+    /* Optional: Add padding for better appearance */
+    text-decoration: none;
+    /* Optional: Remove default underline */
+    position: absolute;
+    top: 90%;
+    left: 46%;
+}
+.idle #back{
+    left: 38%;
+}
+.idle #data{
+    left: 50%;
+}
 }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
         body {
-            font-family: 'Kumbh Sans', sans-serif;
+            font-family: Kanit;
             margin: 0;
             padding: 0;
             background-color: var(--body);
@@ -49,7 +275,7 @@
         .box {
             width: 80%;
             height: 80%;
-            background-color: #EFEFEF;
+            background-color: #ffffff;
             border-radius: 1%;
             padding: 1%;
             position: absolute;
@@ -250,7 +476,7 @@
         .box {
             width: 80%;
             height: 80%;
-            background-color: #EFEFEF;
+            background-color: #ffffff;
             border-radius: 1%;
             padding: 1%;
             position: absolute;
@@ -416,6 +642,221 @@
             left: 55%;
         }
         #back{
+            left: 30%;
+        }
+    }
+    @media only screen and (min-width: 767px) and (max-width: 1024px) {
+        .idle #circle {
+            border: 2px solid #000;
+            border-radius: 50%;
+            height: 2%; /* Decrease the height to make the circle smaller */
+            background-image: url(../Pic/UI_website-removebg-preview.png);
+            background-size: contain; /* Ensure the background image fits within the circle */
+            background-position: center;
+            position: relative;
+            width: 25%; /* Decrease the width to make the circle smaller */
+            overflow: hidden;
+            top: 5%; /* Adjust the top positioning */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .idle p{
+            display: none;
+        }
+        .idle #welcome {
+            width: 40%;
+            font-size: 250%;
+            font-family: Kanit;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .idle body {
+            font-family: 'Kumbh Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--body);
+        }
+
+        .idle #logo {
+            font-family: 'Varela Round', sans-serif;
+            font-weight: bold;
+            bottom: 80%;
+            position: fixed;
+            height: 30%;
+            width: 45%;
+        }
+
+        .idle #clock {
+            font-size: 150%;
+            color: rgb(0, 0, 0);
+            font-family: 'Varela Round', sans-serif;
+            font-weight: bold;
+            top: 5%;
+            right: 5%;
+            position: absolute;
+        }
+
+        .idle .box {
+            width: 80%;
+            height: 80%;
+            background-color: #ffffff;
+            border-radius: 1%;
+            padding: 1%;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .idle  #textbox {
+            font-size: 250%;
+            position: absolute;
+            top: 35%;
+            font-family: Kanit;
+            left: 3%;
+        }
+        .idle #circleint {
+            font-size: 250%;
+            font-weight: bold;
+            position: absolute;
+            top: 24%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Kanit;
+        }
+
+        #SYS {
+            font-size: 180%;
+            position: absolute;
+            top: 48%;
+            font-weight: bold;
+            left: 5%;
+        }
+
+        .idle #DIA {
+            font-size: 180%;
+            position: absolute;
+            top: 57%;
+            font-weight: bold;
+            left: 5%;
+        }
+
+        .idle #PUL {
+            font-size: 180%;
+            position: absolute;
+            top: 66%;
+            font-weight: bold;
+            left: 5%;
+        }
+
+        .idle .result {
+            font-family: Kanit;
+            margin-bottom: 10px;
+            /* Adjust the margin as needed */
+        }
+
+        .idle .resultint {
+            font-family: Kanit;
+
+        }
+
+        .idle #SYSint {
+            font-size: 180%;
+            position: absolute;
+            top: 48%;
+            font-weight: bold;
+            left: 65%;
+
+        }
+        .idle #mmhg1{
+            font-size: 180%;
+            position: absolute;
+            top: 49%;
+            font-weight: bold;
+            left: 75%;
+        }
+
+        .idle #DIAint {
+            font-size: 180%;
+            position: absolute;
+            top: 57%;
+            font-weight: bold;
+            left: 65%;
+
+        }
+        .idle #mmhg2{
+            font-size: 180%;
+            position: absolute;
+            top: 58%;
+            font-weight: bold;
+            left: 75%;
+        }
+        .idle #PULint {
+            font-size: 180%;
+            position: absolute;
+            top: 66%;
+            font-weight: bold;
+            left: 65%;
+
+        }
+        .idle #min{
+            font-size: 180%;
+            position: absolute;
+            top: 67%;
+            font-weight: bold;
+            left: 75%;
+        }
+        .idle #statusnow {
+            font-size: 250%;
+            color: #00FF40;
+            top: 2.8%;
+            left: 20%;
+            position: absolute;
+            font-family: 'Varela Round', sans-serif;
+            font-weight: bold;
+        }
+
+        .idle #advice {
+            font-size: 200%;
+            position: absolute;
+            top: 75%;
+            font-weight: bold;
+            left: 3%;
+            font-family: Kanit;
+        }
+
+        .idle #advicestr {
+            font-size: 250%;
+            position: absolute;
+            top: 75%;
+
+            left: 17%;
+            font-family: Kanit;
+        }
+
+        .idle a {
+            color: black;
+            border-radius: 2px;
+            border: 1px solid black;
+            /* Add a 1px solid black border */
+            padding: 10px 20px;
+            /* Optional: Add padding for better appearance */
+            text-decoration: none;
+            /* Optional: Remove default underline */
+            position: absolute;
+            top: 90%;
+            left: 46%;
+        }
+        .idle #data{
+            left: 55%;
+        }
+        .idle #back{
             left: 30%;
         }
     }

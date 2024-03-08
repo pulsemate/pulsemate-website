@@ -117,7 +117,7 @@ const updateStatus = (statusToUpdate) => {
 
 const getData = () => {
   const Http = new XMLHttpRequest();
-  const url='https://3.1.206.42:1880/getData';
+  const url='http://3.1.206.42:1880/getData';
   Http.open("GET", url);
   Http.send();
 
@@ -155,3 +155,23 @@ socket.addEventListener("message", (event) => {
   }
 });
 
+const socket = new WebSocket("ws://3.1.206.42:1880/dataUpdate");
+
+
+// Connection opened
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
+});
+
+// Listen for messages
+socket.addEventListener("message", (event) => {
+  const data = JSON.parse(event.data)
+  if (data.error) {
+    updateStatus("error");
+  } else {
+    updateStatus("green");
+    document.getElementById("SYSint").innerHTML = data.sys;
+    document.getElementById("PULint").innerHTML = data.pul;
+    document.getElementById("DIAint").innerHTML = data.dia;
+  }
+});
