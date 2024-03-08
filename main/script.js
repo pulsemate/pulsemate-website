@@ -1,4 +1,4 @@
-    var firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyBGGdqJxgpT5PZQnigaVFS-OfMD-jJxjGQ",
     authDomain: "authentication-app-2043f.firebaseapp.com",
     databaseURL: "https://authentication-app-2043f-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -34,7 +34,6 @@ function displayUserInfo(user) {
         userInfoElement.innerHTML = 'ไม่ได้เข้าสู่ระบบ';
     }
 }
-
 firebase.auth().onAuthStateChanged(function (user) {
     displayUserInfo(user);
 });

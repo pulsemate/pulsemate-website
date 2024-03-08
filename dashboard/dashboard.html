@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class="green" id="pageStatus">
+<html lang="en" class="idle" id="pageStatus">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PulseMate</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,13 +17,15 @@
     <link rel="icon" href="../Pic/favicon2.ico" type="image/x-icon">
 </head>
 <body>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     <img id="logo" src="../Pic/UI_website__1_-removebg-preview.png">
     <div id="clock"></div>
     <script src="dashboard.js" defer></script>
     <div class="box">
         <p id="textbox">ผลการวัดความดันได้ดังนี้</p>
-        <div id="circle">
-        </div>
+        <div id="circle"    ></div>
         <p class='result' id="SYS">ค่าความดันขณะหัวใจบีบตัว:</p>
         <p class='result' id="DIA">ค่าความดันขณะหัวใจคลายตัว:</p>
         <p class='result' id="PUL">อัตราการเตันของหัวใจ:</p>
@@ -37,8 +38,9 @@
         <p class="unit" id="mmhg2">mmHg</p>
         <p class="unit" id="min">/Min</p>
     </div>
+    <p class="welcum" id="welcome">Pulsemate <br>ยินดีให้บริการ</p>
     <p id="circleint">ปกติ</p>
     <a id="back" href="../main/main.html">ย้อนกลับ</a>
-    <a href="https://docs.google.com/spreadsheets/d/1_kBuaN78tLVgqU_tSrB6dO4Kq37MLrghEaE3kUYSU98/edit?usp=sharing" id="data">ข้อมูลย้อนหลัง</a>
+    <a href="https://docs.google.com/spreadsheets/d/19cK4hnIc2ogopwfOPtSvilSX4G2foOFJRCCcUML3ljA/edit?usp=sharing" id="data">ข้อมูลย้อนหลัง</a>
 </body>
 </html>

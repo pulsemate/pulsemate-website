@@ -16,11 +16,232 @@
     --body: #F4E135;
     --light:#FFF48F;
     --dark:#F4E135;
-    
+}.green #welcome{
+    display: none;
+}.red #welcome{
+    display: none;
 }
-@media only screen and (min-width: 350px) and (max-width: 428px) {
+.yellow #welcome{
+    display: none;
+}
+.idle{
+    --body:teal;
+}
+@media only screen and (max-width: 767px){
+.idle #circle {
+    border: 2px solid #000;
+    border-radius: 50%;
+    /* height: -15%; Decrease the height to make the circle smaller */
+    background-image: url(../Pic/UI_website-removebg-preview.png);
+    background-size: contain; /* Ensure the background image fits within the circle */
+    background-position: center;
+    position: relative;
+    /* width: 40%; Decrease the width to make the circle smaller */
+    overflow: hidden;
+    top: 5%; /* Adjust the top positioning */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.idle p{
+    display: none;
+}
+.idle .welcum {
+    width: 40%;
+    font-size: 100%;
+    font-family: Kanit;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.idle body {
+    font-family: Kanit;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body);
+}
+
+.idle #logo {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    bottom: 82%;
+    position: absolute;
+    height: 30%;
+    width: 60%;
+}
+
+.idle #clock {
+    font-size: 100%;
+    color: rgb(0, 0, 0);
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    top: 5%;
+    right: 5%;
+    position: absolute;
+}
+
+.idle .box {
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 1%;
+    padding: 1%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.idle #textbox {
+    font-size: 125%;
+    position: absolute;
+    top: 38%;
+    font-family: Kanit;
+    left: 4%;
+}
+
+.idle #circleint {
+    font-size: 250%;
+    position: absolute;
+    top: 23.5%;
+    left: 40%;
+    font-family: Kanit;
+}
+
+.idle #SYS {
+    font-size: 80%;
+    position: absolute;
+    top: 48%;
+    font-weight: bold;
+    left: 5%;
+}
+
+.idle #DIA {
+    font-size: 80%;
+    position: absolute;
+    top: 55%;
+    font-weight: bold;
+    left: 5%;
+}
+
+.idle #PUL {
+    font-size: 80%;
+    position: absolute;
+    top: 62%;
+    font-weight: bold;
+    left: 5%;
+}
+
+.idle .result {
+    font-family: Kanit;
+}
+
+.idle .resultint {
+    font-family: Kanit;
+}
+
+.idle #SYSint {
+    font-size: 80%;
+    position: absolute;
+    top: 48%;
+    font-weight: bold;
+    left: 70%;
+
+}
+.idle #mmhg1{
+    font-size: 80%;
+    position: absolute;
+    top: 49%;
+    font-weight: bold;
+    left: 80%;
+}
+.idle #DIAint {
+    font-size: 80%;
+    position: absolute;
+    top: 55%;
+    font-weight: bold;
+    left: 70%;
+
+}
+.idle #mmhg2{
+    font-size: 80%;
+    position: absolute;
+    top: 56%;
+    font-weight: bold;
+    left: 80%;
+}
+.idle #PULint {
+    font-size: 80%;
+    position: absolute;
+    top: 62%;
+    font-weight: bold;
+    left: 70%;
+
+}
+.idle #min{
+    font-size: 80%;
+    position: absolute;
+    top: 63%;
+    font-weight: bold;
+    left: 80%;
+}
+.idle #statusnow {
+    font-size: 100%;
+    color: #00FF40;
+    top: 1%;
+    left: 23%;
+    position: absolute;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+}
+
+.idle #advice {
+    font-size: 100%;
+    position: absolute;
+    top: 70%;
+    font-weight: bold;
+    left: 3%;
+    font-family: Kanit;
+}
+
+.idle #advicestr {
+    font-size: 100%;
+    position: absolute;
+    top: 75%;
+
+    left: 17%;
+    font-family: Kanit;
+}
+
+.idle a {
+    color: black;
+    border-radius: 2px;
+    border: 1px solid black;
+    /* Add a 1px solid black border */
+    padding: 5px 10px;
+    /* Optional: Add padding for better appearance */
+    text-decoration: none;
+    /* Optional: Remove default underline */
+    position: absolute;
+    top: 90%;
+    left: 42%;
+    font-family: Kanit;
+}
+.idle #data{
+    left: 50%;
+}
+.idle #back{
+    left: 20%;
+}
+}
+
+@media only screen and (max-width: 767px){
     body {
-        font-family: 'Kumbh Sans', sans-serif;
+        font-family: Kanit;
         margin: 0;
         padding: 0;
         background-color: var(--body);
