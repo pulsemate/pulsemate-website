@@ -16,17 +16,9 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-const setDocument = (circleint, textbox, SYS, DIA, PUL, SYSint, DIAint, PULint, advice, advicestr) => {
+const setDocument = (circleint, advicestr) => {
       document.getElementById("circleint").innerHTML = circleint;
-      document.getElementById("textbox").innerHTML = textbox;
-      document.getElementById("SYS").innerHTML = SYS;
-      document.getElementById("DIA").innerHTML =DIA;
-      document.getElementById("PUL").innerHTML =PUL;
-      document.getElementById("SYSint").innerHTML =SYSint;
-      document.getElementById("DIAint").innerHTML =DIAint;
-      document.getElementById("PULint").innerHTML =PULint;
-      document.getElementById("advice").innerHTML =advice;
-      document.getElementById("advicestr").innerHTML =advicestr;
+      document.getElementById("advicestr").innerHTML = advicestr;
 }
 
 const updateStatus = (statusToUpdate) => {
@@ -37,29 +29,13 @@ const updateStatus = (statusToUpdate) => {
     case "green":
       setDocument(
         "ปกติ",
-        "ผลการวัดความดันได้ดังนี้",
-        "ค่าความดันขณะหัวใจบีบตัว: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mmHg",
-        "ค่าความดันขณะหัวใจคลายตัว:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mmHg",
-        "อัตราการเตันของหัวใจ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /Min",
-        "123",
-        "123",
-        "123",
         "ยินดีด้วย คุณมีความดันปกติ",
-        "",
       )
       break;
 
     case "red":
       setDocument(
         "สูง",
-        "ผลการวัดความดันได้ดังนี้",
-        "ค่าความดันขณะหัวใจบีบตัว: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mmHg",
-        "ค่าความดันขณะหัวใจคลายตัว:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mmHg",
-        "อัตราการเตันของหัวใจ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /Min",
-        "123",
-        "123",
-        "123",
-        "คำแนะนำ:",
         "หลีกเลี่ยงอาหารรสเค็ม<br>งดสูบบุหรี่<br>งดดื่มแอลกอฮอ์",
       )
       break;
@@ -67,28 +43,12 @@ const updateStatus = (statusToUpdate) => {
     case "yellow":
       setDocument(
         "ต่ำ",
-        "ผลการวัดความดันได้ดังนี้",
-        "ค่าความดันขณะหัวใจบีบตัว: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mmHg",
-        "ค่าความดันขณะหัวใจคลายตัว:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mmHg",
-        "อัตราการเตันของหัวใจ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /Min",
-        "123",
-        "123",
-        "123",
-        "คำแนะนำ:",
-        "",
+        "หลีกเลี่ยงการดื่มแอลกอฮอล์ <br> ทานอาหารที่มีประโยชน์สารอาหารครบถ้วน <br> ไม่ควรเปลี่ยนท่าทางอย่างรวดเร็วมากเกินไป",
       )
       break;
 
     case "error":
       setDocument(
-        "X",
-        "ERROR",
-        "อ่านค่าผิดพลาดกรุณาลองใหม่อีกครั้ง",
-        "",
-        "",
-        "",
-        "",
-        "",
         "",
         "",
       )
@@ -96,14 +56,6 @@ const updateStatus = (statusToUpdate) => {
 
     case "idle":
       setDocument(
-        "",
-        "PulseMate",
-        "",
-        "",
-        "",
-        "พร้อมให้บริการ",
-        "",
-        "",
         "",
         "",
       )
@@ -123,19 +75,28 @@ const getData = () => {
 
   Http.onreadystatechange = (e) => {
     const data = JSON.parse(Http.responseText)
-    if (data.error) {
+    if (data.idle) {
+      updateStatus("idle")
+    } else if (data.error) {
       updateStatus("error");
     } else {
-      updateStatus("green");
+      if (data.sys > 140 && data.dia > 90) {
+        updateStatus("red");
+      } else if (data.sys > 100 && data.dia > 70) {
+        updateStatus("green");
+      } else {
+        updateStatus("yellow");
+      }
       document.getElementById("SYSint").innerHTML = data.sys;
-      document.getElementById("PULint").innerHTML = data.pul;
       document.getElementById("DIAint").innerHTML = data.dia;
+      document.getElementById("PULint").innerHTML = data.pul;
     }
   };
 }
 
 const socket = new WebSocket("wss://3.1.206.42:1880/dataUpdate");
 
+const socket2 = new WebSocket("ws://3.1.206.42:1880/ws/id");
 
 // Connection opened
 socket.addEventListener("open", (event) => {
@@ -145,33 +106,62 @@ socket.addEventListener("open", (event) => {
 // Listen for messages
 socket.addEventListener("message", (event) => {
   const data = JSON.parse(event.data)
-  if (data.error) {
+  if (data.idle) {
+    updateStatus("idle")
+  } else if (data.error) {
     updateStatus("error");
   } else {
-    updateStatus("green");
+    if (data.sys > 140 && data.dia > 90) {
+      updateStatus("red");
+    } else if (data.sys > 100 && data.dia > 70) {
+      updateStatus("green");
+    } else {
+      updateStatus("yellow");
+    }
     document.getElementById("SYSint").innerHTML = data.sys;
     document.getElementById("PULint").innerHTML = data.pul;
     document.getElementById("DIAint").innerHTML = data.dia;
+    
+    
+    var userId = myuser.uid;
+    var userRef = firebase.database().ref('users/' + userId);
+
+    userRef.once('value').then(function (snapshot) {
+        var userName = snapshot.val().name;
+        var userSurname = snapshot.val().surname;
+        var name = userName + ' ' + userSurname;
+        var idobject = {
+          id: name,
+          header: 1,
+        };
+        idobject = JSON.stringify(idobject);
+        socket2.send(idobject);
+    }).catch(function (error) {
+        console.error('Error getting user data from Realtime Database:', error);
+    });
   }
 });
 
-const socket = new WebSocket("ws://3.1.206.42:1880/dataUpdate");
+var myuser;
 
+var firebaseConfig = {
+    apiKey: "AIzaSyBGGdqJxgpT5PZQnigaVFS-OfMD-jJxjGQ",
+    authDomain: "authentication-app-2043f.firebaseapp.com",
+    databaseURL: "https://authentication-app-2043f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "authentication-app-2043f",
+    storageBucket: "authentication-app-2043f.appspot.com",
+    messagingSenderId: "1083690050567",
+    appId: "1:1083690050567:web:6c79d9fcd23a626b56f6a2",
+    measurementId: "G-FTR73XSRW6"
+};
+firebase.initializeApp(firebaseConfig);
+
+firebase.auth().onAuthStateChanged(function (user) {
+  myuser = user;
+});
 
 // Connection opened
-socket.addEventListener("open", (event) => {
-  socket.send("Hello Server!");
+socket2.addEventListener("open", (event) => {
+  console.log(myuser)
 });
 
-// Listen for messages
-socket.addEventListener("message", (event) => {
-  const data = JSON.parse(event.data)
-  if (data.error) {
-    updateStatus("error");
-  } else {
-    updateStatus("green");
-    document.getElementById("SYSint").innerHTML = data.sys;
-    document.getElementById("PULint").innerHTML = data.pul;
-    document.getElementById("DIAint").innerHTML = data.dia;
-  }
-});
