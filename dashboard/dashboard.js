@@ -69,7 +69,7 @@ const updateStatus = (statusToUpdate) => {
 
 const getData = () => {
   const Http = new XMLHttpRequest();
-  const url='http://3.1.206.42:1880/getData';
+  const url='https://pulsemate.fakepng.dev/getData';
   Http.open("GET", url);
   Http.send();
 
@@ -94,9 +94,9 @@ const getData = () => {
   };
 }
 
-const socket = new WebSocket("wss://3.1.206.42:1880/dataUpdate");
+const socket = new WebSocket("https://pulsemate.fakepng.dev/dataUpdate");
 
-const socket2 = new WebSocket("ws://3.1.206.42:1880/ws/id");
+const socket2 = new WebSocket("https://pulsemate.fakepng.dev/ws/id");
 
 // Connection opened
 socket.addEventListener("open", (event) => {
